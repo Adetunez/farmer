@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type=search]{
+  width: 230px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("/asset/img/search-icon.png");
+  background-position: 10px 5px; 
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  padding: 3px 2px 5px 40px;
+  outline: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background-color: #416C00;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 8px;
+}
+.dropdown-content a {
+  color: #416C00;
+  padding: 12px 16px;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #416c00ce;
+}
+
+@layer base {
+  .navbar{
+    @apply py-5 px-4 flex relative justify-between items-center drop-shadow-md;
+  }
+  img {
+    @apply w-72 ;
+  }
+  .btw{
+    @apply order-last mb-10 md:mb-0 md:order-first;
+  }
+  .btw2{
+    @apply order-first flex flex-col items-end space-y-3 md:flex-row md:items-start md:space-y-0 md:space-x-3 md:box-border md:order-last md:flex md:grow md:ml-auto;
+  }
+  ul{
+    @apply flex flex-col items-end space-y-3 md:flex md:flex-row md:space-y-0 md:items-center md:pl-0 md:mb-0 md:ml-auto;
+  }
+  .link{
+    @apply px-2 text-xl text-manmade1 font-bold; 
+  }
+  .link:hover{
+    @apply text-manmade1 font-normal;
+  }
+  .caret{
+    @apply relative top-1
+  }
+  .nav{
+    @apply hidden absolute top-14 right-0 px-5 py-0 bg-gray-900 h-screen flex flex-col md:flex md:space-y-0 md:relative md:top-0 md:right-0 md:p-0 md:flex-row md:h-full md:flex-grow md:justify-between md:items-center md:ml-4 md:bg-inherit;
+  }
+  .menu{
+    @apply md:hidden text-2xl; 
+  }
+  /* ... */
+}
